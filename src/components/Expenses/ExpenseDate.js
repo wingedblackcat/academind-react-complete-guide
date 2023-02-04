@@ -4,7 +4,7 @@ import './ExpenseDate.css';
  * @param {ExpenseDateProps} props
  * @returns {JSX.Element}
  */
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
   const { date } = props;
   const year = date.getFullYear();
   const month = date.toLocaleString('en-US', { month: 'long' });
@@ -17,7 +17,7 @@ function ExpenseDate(props) {
       <div className="expense-date__day">{day}</div>
     </div>
   );
-}
+};
 
 export default ExpenseDate;
 

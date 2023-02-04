@@ -6,7 +6,7 @@ import './ExpenseItem.css';
  * @param {ExpenseItemProps} props
  * @returns {JSX.Element}
  */
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   const { title, date, amount } = props;
 
   return (
@@ -18,7 +18,7 @@ function ExpenseItem(props) {
       </div>
     </Card>
   );
-}
+};
 
 export default ExpenseItem;
 

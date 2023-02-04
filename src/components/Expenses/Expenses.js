@@ -6,7 +6,7 @@ import './Expenses.css';
  * @param {ExpensesProps} props
  * @returns {JSX.Element}
  */
-function Expenses(props) {
+const Expenses = (props) => {
   const { expenses } = props;
 
   return (
@@ -21,7 +21,7 @@ function Expenses(props) {
       ))}
     </Card>
   );
-}
+};
 
 export default Expenses;
 

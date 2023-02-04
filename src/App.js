@@ -25,14 +25,14 @@ const expenses = [
   },
 ];
 
-function App() {
+const App = () => {
   return (
     <div>
       <h1>Let's get started</h1>
       <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;
 
