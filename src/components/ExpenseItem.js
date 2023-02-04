@@ -2,7 +2,7 @@ import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 
 /**
- * @param props {{title: string; date: Date; amount: number}}
+ * @param {ExpenseItemProps} props
  * @returns {JSX.Element}
  */
 function ExpenseItem(props) {
@@ -20,3 +20,11 @@ function ExpenseItem(props) {
 }
 
 export default ExpenseItem;
+
+/**
+ * @typedef ExpenseItemProps
+ * @type object
+ * @property {string} title - Expense title
+ * @property {Date} date - Expense date
+ * @property {number} amount - Expense Amount
+ */

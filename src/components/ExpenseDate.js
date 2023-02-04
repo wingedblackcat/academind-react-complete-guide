@@ -1,7 +1,7 @@
 import './ExpenseDate.css';
 
 /**
- * @param props {{date: Date}}
+ * @param {ExpenseDateProps} props
  * @returns {JSX.Element}
  */
 function ExpenseDate(props) {
@@ -20,3 +20,9 @@ function ExpenseDate(props) {
 }
 
 export default ExpenseDate;
+
+/**
+ *  @typedef ExpenseDateProps
+ *  @type object
+ *  @property {Date} date - Expense Date
+ */
