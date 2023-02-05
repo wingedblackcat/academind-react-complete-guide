@@ -18,50 +18,48 @@ const ExpenseForm = () => {
   const [enteredDate, setEnteredDate] = useState(new Date());
 
   /**
-   * @param {ChangeEvent<HTMLInputElement>=} event
+   * @param {ChangeEvent<HTMLInputElement>} event
    */
   const titleChangeHandler = (event) => {
-    if (event) {
-      setEnteredTitle(event.target.value);
-    }
+    setEnteredTitle(event.target.value);
   };
 
   /**
-   * @param {ChangeEvent<HTMLInputElement>=} event
+   * @param {ChangeEvent<HTMLInputElement>} event
    */
   const amountChangeHandler = (event) => {
-    if (event) {
-      setEnteredAmount(event.target.valueAsNumber);
+    const amountValue = event.target.valueAsNumber;
+
+    if (!isNaN(amountValue)) {
+      setEnteredAmount(amountValue);
+    } else {
+      setEnteredAmount(0);
     }
   };
 
   /**
-   * @param {ChangeEvent<HTMLInputElement>=} event
+   * @param {ChangeEvent<HTMLInputElement>} event
    */
   const dateChangeHandler = (event) => {
-    if (event) {
-      setEnteredDate(event.target.valueAsDate);
-    }
+    setEnteredDate(event.target.valueAsDate);
   };
 
   /**
-   * @param {FormEvent<HTMLFormElement>=} event
+   * @param {FormEvent<HTMLFormElement>} event
    */
   const submitHandler = (event) => {
-    if (event) {
-      event.preventDefault();
+    event.preventDefault();
 
-      const expenseData = {
-        title: enteredTitle,
-        amount: enteredAmount,
-        date: enteredDate,
-      };
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: enteredDate,
+    };
 
-      console.log(expenseData);
-      setEnteredTitle('');
-      setEnteredAmount(0);
-      setEnteredDate(new Date());
-    }
+    console.log(expenseData);
+    setEnteredTitle('');
+    setEnteredAmount(0);
+    setEnteredDate(new Date());
   };
 
   return (
