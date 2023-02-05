@@ -4,7 +4,6 @@ import './NewExpense.css';
 /**
  * @param {NewExpenseProps} props
  * @returns {JSX.Element}
- * @constructor
  */
 const NewExpense = (props) => {
   const { onAddExpense } = props;
