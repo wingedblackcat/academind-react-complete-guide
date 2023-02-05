@@ -16,5 +16,5 @@ export default Card;
  * @typedef CardProps
  * @type object
  * @property {React.Children} children - React child components
- * @property {string|undefined} className - class name
+ * @property {string} className - class name
  */
