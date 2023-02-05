@@ -12,7 +12,13 @@ const formatDateValue = (date) => {
   return `${year}-${month}-${day}`;
 };
 
-const ExpenseForm = () => {
+/**
+ * @param {ExpenseFormProps} props
+ * @returns {JSX.Element}
+ */
+const ExpenseForm = (props) => {
+  const { onSaveExpenseData } = props;
+
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState(0);
   const [enteredDate, setEnteredDate] = useState(new Date());
@@ -56,7 +62,7 @@ const ExpenseForm = () => {
       date: enteredDate,
     };
 
-    console.log(expenseData);
+    onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount(0);
     setEnteredDate(new Date());
@@ -102,3 +108,9 @@ const ExpenseForm = () => {
 };
 
 export default ExpenseForm;
+
+/**
+ * @typedef ExpenseFormProps
+ * @type Object
+ * @property {Function} onSaveExpenseData
+ */
