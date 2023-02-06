@@ -11,18 +11,23 @@ import { useState } from 'react';
 const Expenses = (props) => {
   const { expenses } = props;
 
-  const [filteredYear, setFilteredYear] = useState(new Date().getFullYear().toString());
+  const [filteredYear, setFilteredYear] = useState(
+    new Date().getFullYear().toString()
+  );
 
   /**
    * @param {string} selectedYear
    */
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
-  }
+  };
 
   return (
-    <Card className="expenses">
-      <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
+    <Card className='expenses'>
+      <ExpensesFilter
+        selected={filteredYear}
+        onChangeFilter={filterChangeHandler}
+      />
       {expenses.map((expense) => (
         <ExpenseItem
           title={expense.title}
