@@ -13,7 +13,7 @@ const Chart = (props) => {
       {dataPoints.map((dataPoint) => (
         <ChartBar
           value={dataPoint.value}
-          maxValue={null}
+          max={null}
           label={dataPoint.label}
           key={dataPoint.label}
         />
