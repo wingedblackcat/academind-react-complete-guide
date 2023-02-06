@@ -18,7 +18,7 @@ const formatDateValue = (date) => {
  * @returns {JSX.Element}
  */
 const ExpenseForm = (props) => {
-  const { onSaveExpenseData } = props;
+  const { onSaveExpenseData, onCancel } = props;
 
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState(0);
@@ -105,6 +105,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button type='button' onClick={onCancel}>Cancel</button>
         <button type='submit'>Add Expense</button>
       </div>
     </form>
@@ -117,4 +118,5 @@ export default ExpenseForm;
  * @typedef ExpenseFormProps
  * @type Object
  * @property {Function} onSaveExpenseData
+ * @property {Function} onCancel
  */
