@@ -1,8 +1,9 @@
+import { useState } from 'react';
+
 import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import ExpensesFilter from './ExpensesFilter';
 import './Expenses.css';
-import { useState } from 'react';
 
 /**
  * @param {ExpensesProps} props

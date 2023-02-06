@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import './ExpenseForm.css';
 
 /**
@@ -59,7 +60,7 @@ const ExpenseForm = (props) => {
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate,
+      date: enteredDate
     };
 
     onSaveExpenseData(expenseData);
@@ -70,41 +71,41 @@ const ExpenseForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className="new-expense__controls">
-        <div className="new-expense__control">
+      <div className='new-expense__controls'>
+        <div className='new-expense__control'>
           <label>Title</label>
           <input
-            type="text"
+            type='text'
             value={enteredTitle}
             onChange={titleChangeHandler}
-            placeholder="Expense Title"
+            placeholder='Expense Title'
             required
           />
         </div>
-        <div className="new-expense__control">
+        <div className='new-expense__control'>
           <label>Amount</label>
           <input
-            type="number"
+            type='number'
             value={enteredAmount}
-            min="0.01"
-            step="0.01"
+            min='0.01'
+            step='0.01'
             onChange={amountChangeHandler}
             required
           />
         </div>
-        <div className="new-expense__control">
+        <div className='new-expense__control'>
           <label>Date</label>
           <input
-            type="date"
+            type='date'
             value={formatDateValue(enteredDate)}
-            min="2019-01-01"
-            max="2023-12-31"
+            min='2019-01-01'
+            max='2023-12-31'
             onChange={dateChangeHandler}
           />
         </div>
       </div>
-      <div className="new-expense__actions">
-        <button type="submit">Add Expense</button>
+      <div className='new-expense__actions'>
+        <button type='submit'>Add Expense</button>
       </div>
     </form>
   );
