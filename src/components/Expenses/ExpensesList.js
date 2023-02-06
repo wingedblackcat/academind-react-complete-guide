@@ -9,11 +9,11 @@ const ExpensesList = (props) => {
   const { expenses } = props;
 
   if (expenses.length === 0) {
-    return <p className='expenses-list__fallback'>No expenses found :D</p>;
+    return <p className="expenses-list__fallback">No expenses found :D</p>;
   }
 
   return (
-    <ul className='expenses-list'>
+    <ul className="expenses-list">
       {expenses.map((expense) => (
         <ExpenseItem
           title={expense.title}
