@@ -5,12 +5,12 @@ import './ChartBar.css';
  * @returns {JSX.Element}
  */
 const ChartBar = (props) => {
-  const { value, max, label } = props;
+  const { value, maxValue, label } = props;
 
   let barFillHeight = '0%';
 
-  if (max > 0) {
-    barFillHeight = `${Math.round((value / max) * 100)}%`;
+  if (maxValue > 0) {
+    barFillHeight = `${Math.round((value / maxValue) * 100)}%`;
   }
 
   return (
@@ -32,6 +32,6 @@ export default ChartBar;
  * @typedef ChartBarProps
  * @type object
  * @property {number} value
- * @property {number} max
+ * @property {number} maxValue
  * @property {string} label
  */
